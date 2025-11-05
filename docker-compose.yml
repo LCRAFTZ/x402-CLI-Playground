@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  x402:
+    build: .
+    command: ["node", "./bin/x402.js", "serve", "--facilitator", "mock", "--endpoint", "/content", "--pay-to", "mock-payee", "--port", "${X402_PORT:-4020}"]
+    ports:
+      - "${X402_PORT:-4020}:${X402_PORT:-4020}"
+    environment:
+      - X402_HOST=0.0.0.0
+    network_mode: none
