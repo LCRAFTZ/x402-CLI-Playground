@@ -1,14 +1,20 @@
 {
   "name": "x402-cli",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Offline-first CLI for simulating the x402 payment protocol",
   "license": "MIT",
   "engines": {
     "node": ">=20"
   },
   "type": "module",
-  "bin": { "x402": "./dist/bin/x402.js" },
-  "files": ["dist", "README.md", "LICENSE"],
+  "bin": {
+    "x402": "./dist/bin/x402.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc && node ./scripts/copy-bin.mjs",
     "start": "node ./bin/x402.js",
