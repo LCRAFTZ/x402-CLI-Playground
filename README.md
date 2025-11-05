@@ -15,7 +15,7 @@ x402 inspect <tx-hash> --json
 - Implements x402 v1 PaymentRequirements and X-PAYMENT.
 - Validates all payloads with Zod schemas.
 - Uses a mock facilitator for in-memory verification and settlement.
-- Spec reference: https://github.com/x402/spec
+ - Spec reference: `[x402 Protocol (pending public release)]`
 
 ## Key Features
 
@@ -59,6 +59,8 @@ services:
 The container runs with no external network access by default, making it safe for CI.
 
 ## Installation
+
+Available on `https://www.npmjs.com/package/x402-cli` :
 
 ```bash
 npm install -g x402-cli
