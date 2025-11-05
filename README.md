@@ -76,7 +76,7 @@ MIT License. See LICENSE.
 
 Have questions, suggestions, or collaboration ideas? Feel free to reach out!
 
-Email: logiccrafterdz@gmail.com
-Website: `https://www.logiccrafterdz.site`
-Farcaster: `https://farcaster.xyz/esta`
-Twitter/X: `https://x.com/Arana_lib`
+- Email: logiccrafterdz@gmail.com
+- Website: `https://www.logiccrafterdz.site`
+- Farcaster: `https://farcaster.xyz/esta`
+- Twitter/X: `https://x.com/Arana_lib`
