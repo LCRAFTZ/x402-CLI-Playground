@@ -1,3 +1,5 @@
+// Offline-safe: no external network calls; runs entirely in local mode.
+// This E2E test is safe for CI runners without internet access.
 import { describe, it, expect } from 'vitest';
 import { serve } from '../src/commands/serve.js';
 import { pay } from '../src/commands/pay.js';

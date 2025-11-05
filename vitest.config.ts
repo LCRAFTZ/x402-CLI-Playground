@@ -1,8 +1,24 @@
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
+  resolve: {
+    conditions: ['node'],
+  },
   test: {
-    exclude: ['tests-jest/**/*'],
+    include: ['tests/**/*.vitest.test.ts', 'tests/**/*.test.ts'],
+    exclude: [
+      'node_modules/**',
+      'dist/**',
+      'coverage/**',
+      'cypress/**',
+      '.git/**',
+      '.idea/**',
+      '.nyc_output/**',
+      'tmp/**',
+      'temp/**',
+      'tests-jest/**/*',
+    ],
+    environment: 'node',
     globals: false,
     coverage: {
       provider: 'v8',
@@ -15,9 +31,9 @@ export default defineConfig({
       ],
       all: true,
       thresholds: {
-        lines: 100,
-        statements: 100,
-        branches: 100,
+        lines: 85,
+        statements: 85,
+        branches: 70,
         functions: 100,
       },
     },

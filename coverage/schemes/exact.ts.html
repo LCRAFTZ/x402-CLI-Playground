@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>19/19</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>1/1</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/19</span>
+                <span class='fraction'>19/19</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -88,7 +88,7 @@
 <a name='L23'></a><a href='#L23'>23</a>
 <a name='L24'></a><a href='#L24'>24</a>
 <a name='L25'></a><a href='#L25'>25</a>
-<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L26'></a><a href='#L26'>26</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -96,24 +96,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" >import { Signer } from 'ethers';<span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" ></span></span></span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">import { Signer } from 'ethers';
 import { deterministicTxHash, signPayload } from '../utils/crypto.js';
 import type { PaymentRequirementsV1, PaymentPayload } from '../types/x402.js';
 &nbsp;
@@ -121,31 +121,31 @@ export interface BuildExactOptions {
   wallet: Signer;
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export async function buildExactPayment(req: PaymentRequirementsV1, opts: BuildExactOptions): Promise&lt;PaymentPayload&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  const fromAddress = await opts.wallet.getAddress();</span>
-<span class="cstat-no" title="statement not covered" >  const base = {</span>
-<span class="cstat-no" title="statement not covered" >    version: 'v1' as const,</span>
-<span class="cstat-no" title="statement not covered" >    requestId: req.requestId,</span>
-<span class="cstat-no" title="statement not covered" >    scheme: req.scheme,</span>
-<span class="cstat-no" title="statement not covered" >    network: req.network,</span>
-<span class="cstat-no" title="statement not covered" >    asset: req.asset,</span>
-<span class="cstat-no" title="statement not covered" >    amount: req.price,</span>
-<span class="cstat-no" title="statement not covered" >    from: fromAddress,</span>
-<span class="cstat-no" title="statement not covered" >    to: req.payTo,</span>
-<span class="cstat-no" title="statement not covered" >    nonce: `${Date.now()}`,</span>
-<span class="cstat-no" title="statement not covered" >    timestamp: Date.now(),</span>
-<span class="cstat-no" title="statement not covered" >  } as const;</span>
-<span class="cstat-no" title="statement not covered" >  const txHash = deterministicTxHash(base);</span>
-<span class="cstat-no" title="statement not covered" >  const signature = await signPayload(opts.wallet, txHash);</span>
-<span class="cstat-no" title="statement not covered" >  return { ...base, txHash, signature };</span>
-<span class="cstat-no" title="statement not covered" >}</span></pre></td></tr></table></pre>
+export async function buildExactPayment(req: PaymentRequirementsV1, opts: BuildExactOptions): Promise&lt;PaymentPayload&gt; {
+  const fromAddress = await opts.wallet.getAddress();
+  const base = {
+    version: 'v1' as const,
+    requestId: req.requestId,
+    scheme: req.scheme,
+    network: req.network,
+    asset: req.asset,
+    amount: req.price,
+    from: fromAddress,
+    to: req.payTo,
+    nonce: `${Date.now()}`,
+    timestamp: Date.now(),
+  } as const;
+  const txHash = deterministicTxHash(base);
+  const signature = await signPayload(opts.wallet, txHash);
+  return { ...base, txHash, signature };
+}</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-11-05T20:32:07.059Z
+                at 2025-11-05T21:17:28.073Z
             </div>
         <script src="../prettify.js"></script>
         <script>

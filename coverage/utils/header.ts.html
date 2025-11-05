@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>16/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>4/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>2/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">88.88% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>0/18</span>
+                <span class='fraction'>16/18</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -83,54 +83,54 @@
 <a name='L18'></a><a href='#L18'>18</a>
 <a name='L19'></a><a href='#L19'>19</a>
 <a name='L20'></a><a href='#L20'>20</a>
-<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-no">&nbsp;</span>
+<a name='L21'></a><a href='#L21'>21</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" ><span class="branch-0 cbranch-no" title="branch not covered" >import { PaymentPayloadSchema, type PaymentPayload } from '../types/x402.js';</span></span></span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">import { PaymentPayloadSchema, type PaymentPayload } from '../types/x402.js';
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export function buildXPaymentHeader(payload: PaymentPayload): string {</span>
+export function buildXPaymentHeader(payload: PaymentPayload): string {
   // Validate payload strictly
-<span class="cstat-no" title="statement not covered" >  const parsed = PaymentPayloadSchema.safeParse(payload);</span>
-<span class="cstat-no" title="statement not covered" >  if (!parsed.success) {</span>
-<span class="cstat-no" title="statement not covered" >    throw new Error('Invalid PaymentPayload: ' + JSON.stringify(parsed.error.format()));</span>
-<span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" >  const json = JSON.stringify(payload);</span>
-<span class="cstat-no" title="statement not covered" >  return Buffer.from(json).toString('base64');</span>
-<span class="cstat-no" title="statement not covered" >}</span>
+  const parsed = PaymentPayloadSchema.safeParse(payload);
+  if (!parsed.success) {
+    throw new Error('Invalid PaymentPayload: ' + JSON.stringify(parsed.error.format()));
+  }
+  const json = JSON.stringify(payload);
+  return Buffer.from(json).toString('base64');
+}
 &nbsp;
-<span class="cstat-no" title="statement not covered" >export function parseXPaymentHeader(header: string): PaymentPayload {</span>
-<span class="cstat-no" title="statement not covered" >  const json = Buffer.from(header, 'base64').toString('utf8');</span>
-<span class="cstat-no" title="statement not covered" >  const obj = JSON.parse(json);</span>
-<span class="cstat-no" title="statement not covered" >  const parsed = PaymentPayloadSchema.safeParse(obj);</span>
-<span class="cstat-no" title="statement not covered" >  if (!parsed.success) {</span>
+export function parseXPaymentHeader(header: string): PaymentPayload {
+  const json = Buffer.from(header, 'base64').toString('utf8');
+  const obj = JSON.parse(json);
+  const parsed = PaymentPayloadSchema.safeParse(obj);
+  if (!parsed.success) <span class="branch-0 cbranch-no" title="branch not covered" >{</span>
 <span class="cstat-no" title="statement not covered" >    throw new Error('Invalid X-PAYMENT header payload: ' + JSON.stringify(parsed.error.format()));</span>
 <span class="cstat-no" title="statement not covered" >  }</span>
-<span class="cstat-no" title="statement not covered" >  return parsed.data;</span>
-<span class="cstat-no" title="statement not covered" >}</span></pre></td></tr></table></pre>
+  return parsed.data;
+}</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-11-05T20:32:07.059Z
+                at 2025-11-05T21:17:28.073Z
             </div>
         <script src="../prettify.js"></script>
         <script>
